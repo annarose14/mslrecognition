@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hand Gesture Recognition</title>
+    <style>
+        body {
+            font-family: 'Malayalam Font', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        
+        @font-face {
+            font-family: 'Malayalam Font';
+            src: url('C:\Users\14ann\OneDrive\Desktop\mainproject\AnjaliOldLipi-Regular.ttf') format('truetype');
+        }
+        
+        #container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        #video-container {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        
+        #sentence {
+            font-size: 32px;
+            text-align: center;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Hand Gesture Recognition</h1>
+        <div id="video-container">
+            <img id="video-feed" src="{{ url_for('video_feed') }}" alt="Webcam Feed" width="100%">
+        </div>
+        <p id="sentence">{{ sentence }}</p>
+    </div>
+</body>
+
+</html>
